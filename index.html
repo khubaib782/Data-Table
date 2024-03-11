@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Table</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr style="cursor: pointer">
+          <th>Select</th>
+          <th>ID</th>
+          <th>Product Name</th>
+          <th>Product Title</th>
+          <th>Product Description</th>
+          <th>Product Vendor</th>
+          <th>In Stock</th>
+          <th>Buying Price</th>
+          <th>Sale Price</th>
+          <th>Purchase Quantity</th>
+          <th>Product Type</th>
+          <th>Shipping Rates</th>
+          <th>Refill Limit</th>
+          <th>Product Location Address</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Select">
+            <input type="checkbox" name="productCheckbox" />
+          </td>
+          <td data-label="ID">001</td>
+          <td data-label="Product Name">Product A</td>
+          <td data-label="Product Title">Title A</td>
+          <td data-label="Product Description">Description A</td>
+          <td data-label="Product Vendor">Vendor A</td>
+          <td data-label="In Stock">Yes</td>
+          <td data-label="Buying Price">$10</td>
+          <td data-label="Sale Price">$15</td>
+          <td data-label="Purchase Quantity">10</td>
+          <td data-label="Product Type">Type A</td>
+          <td data-label="Shipping Rates">$5</td>
+          <td data-label="Refill Limit">100</td>
+          <td data-label="Product Location Address">456 Main St.</td>
+          <td>
+            <button class="actionBtn" data-action="addVendor">
+              Add Vendor
+            </button>
+            <button class="actionBtn" data-action="addProduct">
+              Add Product
+            </button>
+            <button class="actionBtn" data-action="editProduct">
+              Edit Product
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Select">
+            <input type="checkbox" name="productCheckbox" />
+          </td>
+          <td data-label="ID">002</td>
+          <td data-label="Product Name">Product B</td>
+          <td data-label="Product Title">Title B</td>
+          <td data-label="Product Description">Description B</td>
+          <td data-label="Product Vendor">Vendor B</td>
+          <td data-label="In Stock">Yes</td>
+          <td data-label="Buying Price">$20</td>
+          <td data-label="Sale Price">$25</td>
+          <td data-label="Purchase Quantity">20</td>
+          <td data-label="Product Type">Type B</td>
+          <td data-label="Shipping Rates">$10</td>
+          <td data-label="Refill Limit">120</td>
+          <td data-label="Product Location Address">789 Main St.</td>
+          <td>
+            <button class="actionBtn" data-action="addVendor">
+              Add Vendor
+            </button>
+            <button class="actionBtn" data-action="addProduct">
+              Add Product
+            </button>
+            <button class="actionBtn" data-action="editProduct">
+              Edit Product
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Select">
+            <input type="checkbox" name="productCheckbox" />
+          </td>
+          <td data-label="ID">003</td>
+          <td data-label="Product Name">Product C</td>
+          <td data-label="Product Title">Title C</td>
+          <td data-label="Product Description">Description C</td>
+          <td data-label="Product Vendor">Vendor C</td>
+          <td data-label="In Stock">Yes</td>
+          <td data-label="Buying Price">$30</td>
+          <td data-label="Sale Price">$35</td>
+          <td data-label="Purchase Quantity">30</td>
+          <td data-label="Product Type">Type C</td>
+          <td data-label="Shipping Rates">$25</td>
+          <td data-label="Refill Limit">130</td>
+          <td data-label="Product Location Address">123 Main St.</td>
+          <td>
+            <button class="actionBtn" data-action="addVendor">
+              Add Vendor
+            </button>
+            <button class="actionBtn" data-action="addProduct">
+              Add Product
+            </button>
+            <button class="actionBtn" data-action="editProduct">
+              Edit Product
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Select">
+            <input type="checkbox" name="productCheckbox" />
+          </td>
+          <td data-label="ID">004</td>
+          <td data-label="Product Name">Product D</td>
+          <td data-label="Product Title">Title D</td>
+          <td data-label="Product Description">Description D</td>
+          <td data-label="Product Vendor">Vendor D</td>
+          <td data-label="In Stock">Yes</td>
+          <td data-label="Buying Price">$30</td>
+          <td data-label="Sale Price">$35</td>
+          <td data-label="Purchase Quantity">50</td>
+          <td data-label="Product Type">Type D</td>
+          <td data-label="Shipping Rates">$35</td>
+          <td data-label="Refill Limit">100</td>
+          <td data-label="Product Location Address">123 Main St.</td>
+          <td>
+            <button class="actionBtn" data-action="addVendor">
+              Add Vendor
+            </button>
+            <button class="actionBtn" data-action="addProduct">
+              Add Product
+            </button>
+            <button class="actionBtn" data-action="editProduct">
+              Edit Product
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Select">
+            <input type="checkbox" name="productCheckbox" />
+          </td>
+          <td data-label="ID">005</td>
+          <td data-label="Product Name">Product E</td>
+          <td data-label="Product Title">Title E</td>
+          <td data-label="Product Description">Description E</td>
+          <td data-label="Product Vendor">Vendor E</td>
+          <td data-label="In Stock">Yes</td>
+          <td data-label="Buying Price">$10</td>
+          <td data-label="Sale Price">$15</td>
+          <td data-label="Purchase Quantity">20</td>
+          <td data-label="Product Type">Type E</td>
+          <td data-label="Shipping Rates">$5</td>
+          <td data-label="Refill Limit">100</td>
+          <td data-label="Product Location Address">333 Main St.</td>
+          <td>
+            <button class="actionBtn" data-action="addVendor">
+              Add Vendor
+            </button>
+            <button class="actionBtn" data-action="addProduct">
+              Add Product
+            </button>
+            <button class="actionBtn" data-action="editProduct">
+              Edit Product
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="/myScript.js"></script>
+  </body>
+</html>
