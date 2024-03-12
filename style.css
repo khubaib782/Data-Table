@@ -1,11 +1,23 @@
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* color: white; */
+  background-image: url("https://images.pexels.com/photos/990344/pexels-photo-990344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 table {
+  background-color: white;
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 50px;
+}
+td {
+  /* background: linear-gradient(100deg, #5f2bd9, #b10c93); */
 }
 
 th,
@@ -13,16 +25,45 @@ td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
+  white-space: nowrap;
 }
 
 th {
-  background-color: #4caf50;
+  background: linear-gradient(45deg, #6f42c1, #8e44ad);
   color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+tbody tr:first-child td:first-child,
+tbody tr:last-child td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 0;
+}
+
+tbody tr:first-child td:last-child,
+tbody tr:last-child td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
 }
 
 @media screen and (max-width: 600px) {
   table {
-    border: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
   table thead {
     display: none;
@@ -44,12 +85,8 @@ th {
   }
 }
 
-#editProductBtn {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.actionBtn {
+/* Button Styling */
+/* .actionBtn {
   padding: 8px 15px;
   font-size: 12px;
   border: none;
@@ -60,42 +97,80 @@ th {
   margin-right: 10px;
   margin-bottom: 10px;
   transition: background-color 0.3s ease;
-}
+} */
 
-.actionBtn:hover {
+/* .actionBtn:hover {
   background-color: #45a049;
 }
 
 .actionBtn:active {
   background-color: #3e8e41;
+} */
+
+.actionBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
 }
 
-@media screen and (max-width: 600px) {
-  .actionBtn {
-    padding: 6px 12px;
-  }
+.actionBtn img {
+  width: 24px;
+  height: 24px;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f0f8ff;
+.button-container {
+  display: flex;
+  gap: 10px;
 }
 
-tbody tr:hover {
-  background-color: #add8e6;
+.container {
+  width: 100%;
+  max-height: 97vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
 }
 
-tbody tr:first-child td:first-child,
-tbody tr:last-child td:first-child {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+.container::-webkit-scrollbar {
+  width: 6px;
 }
 
-tbody tr:first-child td:last-child,
-tbody tr:last-child td:last-child {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+.container::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-tbody tr:last-child td {
-  border-bottom: none;
+.container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.container::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Style for the text tooltip */
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+/* Show text tooltip when hovering over the button */
+.actionBtn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
